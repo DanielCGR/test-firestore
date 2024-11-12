@@ -4,6 +4,7 @@ from flask_restx import Api, Resource, fields
 import firebase_admin
 from firebase_admin import credentials, firestore
 import threading
+import os
 
 # %%
 # Inicializa Firebase
@@ -87,6 +88,6 @@ class Item(Resource):
 # %%
 # Ejecutar la aplicación
 if __name__ == '__main__':
-    app.run(port=5000, debug=False)
+    app.run(host="0.0.0.0", port=os.getenv("PORT", default=5000), debug=False)
 
 
