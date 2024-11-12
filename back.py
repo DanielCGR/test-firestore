@@ -1,4 +1,9 @@
 # %%
+# app main file
+import restx_monkey as monkey
+
+monkey.patch_restx()
+
 from flask import Flask, jsonify, request
 from flask_restx import Api, Resource, fields
 import firebase_admin
