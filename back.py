@@ -7,7 +7,7 @@ import threading
 
 # %%
 # Inicializa Firebase
-cred = credentials.Certificate("firebase_config.json")
+cred = credentials.Certificate("/etc/secrets/firebase_config.json")
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 collection_name = "items"
